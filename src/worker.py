@@ -2,7 +2,7 @@ import asyncio
 from temporalio.worker import Worker
 from temporalio.client import Client
 from workflows import RagPipelineWorkflow, RagRetrieveWorkflow
-from activities import extract, chunk, index_dense, retrieve_dense, retrieve_sparse, query, rerank, generate
+from activities import extract, chunk, index_dense, retrieve_dense, query, rerank, generate
 
 async def main():
     # Connect to the local Temporal server
@@ -13,7 +13,7 @@ async def main():
         client,
         task_queue="hello-world",
         workflows=[RagPipelineWorkflow, RagRetrieveWorkflow],
-        activities=[extract, chunk, index_dense, retrieve_dense, retrieve_sparse, query, rerank, generate],
+        activities=[extract, chunk, index_dense, retrieve_dense, query, rerank, generate],
     )
 
     print("Worker started. Listening on 'hello-world'...")

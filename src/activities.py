@@ -11,7 +11,6 @@ from typing import List
 import pdfplumber
 import semchunk
 import tiktoken
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 @activity.defn
 async def extract(file_path: str) -> str:

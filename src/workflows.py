@@ -20,16 +20,6 @@ class RagPipelineWorkflow:
             schedule_to_close_timeout=timedelta(seconds=30)
         )
 
-        # Step 3: Create sparse embeddings
-        # await workflow.execute_activity(
-        #     "index_sparse",
-        #     {
-        #         "chunks": chunks,
-        #         "file_path": file_path,
-        #     },
-        #     schedule_to_close_timeout=timedelta(seconds=30)
-        # )
-
         # Step 4: Create dense embeddings
         await workflow.execute_activity(
             "index_dense",
