@@ -1,0 +1,1 @@
+A Retrieval-Augmented Generation pipeline built on Temporal for durable workflow orchestration. Ingests PDFs, chunks and embeds them into a Qdrant vector store, then answers queries via dense retrieval, reranking, and LLM synthesis. My first project working with vector databases and workflow engines.
